@@ -1,0 +1,72 @@
+<div class="top-nav">
+  <div class="top-nav-content">
+    <div class="row">
+      <div class="col-3">
+        <h3>Testing <strong>Platforme</strong><sup>App</sup></h3>
+      </div>
+
+      <div class="col-4">
+        <form>
+          <input type="email" class="form-control top-nav_search-input" placeholder="Votre recherche ici ...">
+        </form>
+      </div>
+
+      <div class="col-4">
+        <div class="content-user float-right">
+          <div class="row">
+            <div class="col-2 img-user">
+              <img src="https://cdn2.iconfinder.com/data/icons/toolbar-signs-4/512/admin_add_user_edit_delete-512.png"class="img-circle" width="52" height="52" style="border-radius: 100%;">
+            </div>
+            <div class="col-8 name-function-user">
+              <label>Admin AL ADMIN</label><br>
+              <span>Admin</span>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="left-nav">
+  <ul class="menu-items">
+    <li class="menu-item" routerLink="/dashboard" routerLinkActive="active">
+      <i class="fa fa-tachometer fa-2x"></i><br>
+      Dahsboard
+    </li>
+
+    <li class="menu-item" routerLink="/questions" routerLinkActive="active">
+      <i class="fa fa-question-circle fa-2x"></i><br>
+      Questions
+    </li>
+
+    <li class="menu-item" routerLink="/examinations" routerLinkActive="active">
+      <i class="fa fa-telegram fa-2x"></i><br>
+      Examination
+    </li>
+
+    <li class="menu-item" routerLink="/category" routerLinkActive="active">
+      <i class="fa fa-list-alt fa-2x"></i><br>
+      Catégories
+    </li>
+
+    <li class="menu-item" routerLink="/products" routerLinkActive="active">
+      <i class="fa fa-product-hunt fa-2x"></i><br>
+      Produits
+    </li>
+
+    <li class="menu-item" routerLink="/admin" routerLinkActive="active">
+      <i class="fa fa-cogs fa-2x"></i><br>
+      Administration
+    </li>
+
+    <li class="menu-item" (click)="logout()">
+      <i class="fa fa-sign-out fa-2x"></i><br>
+      Deconnexion
+    </li>
+  </ul>
+</div>
+

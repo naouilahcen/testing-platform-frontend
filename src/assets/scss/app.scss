@@ -1,0 +1,20 @@
+/*================================================================================================
+	File Name: app.scss
+	Description: Mail application scss file.
+================================================================================================*/
+
+
+
+@import "bootstrap-extended";
+@import "colors";
+@import "components";
+@import "ng-vertical-menu-template-light";
+@import url('https://fonts.googleapis.com/css?family=Exo:300,400,500,700');
+
+body{
+  font-family: 'Exo', sans-serif !important;
+}
+.container{
+  position: relative !important;
+  top: 70px !important;
+}

@@ -1,0 +1,111 @@
+<div id="add-modele">
+  <nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/admin"><i class="icon-settings"></i> Administration</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Nouvelle question</li>
+    </ul>
+  </nav>
+  <div class="container-fluid">
+    <div class="spacer"></div>
+    <div class="card">
+      <div class="card-body">
+        <section>
+          <div class="doNotPrint">
+            <h4 class="card-title text-muted" *ngIf="!question?.id">Ajouter un nouvel question</h4>
+            <h4 class="card-title text-muted" *ngIf="question?.id">Editer la question </h4>
+          </div>
+          <form [formGroup]="formQuestion" (ngSubmit)='addQuestion(formQuestion)' novalidate>
+            <tabset [justified]="true">
+              <tab heading="question" class="active">
+                <div class="container-fluid">
+                  <div class="form-group row required">
+                    <label for="enonce" class="col-sm-3 col-form-label">enonce</label>
+                    <div class="col-sm-9">
+                      <input type="text"
+                             class="form-control"
+                             id="enonce"
+                             placeholder="enonce"
+                             formControlName="enonce">
+                    </div>
+                  </div>
+                  <div class="form-group row required">
+                    <label for="description" class="col-sm-3 col-form-label">description</label>
+                    <div class="col-sm-9">
+                      <input type="text"
+                             class="form-control"
+                             id="description"
+                             placeholder="description"
+                             formControlName="description"
+                             >
+                    </div>
+                  </div>
+                 <!-- <div class="form-group row required">
+                    <label for="responseDto" class="col-sm-3 col-form-label">response</label>
+                    <div class="col-sm-9">
+                      <input type="text"
+                             class="form-control"
+                             id="responseDto"
+                             placeholder="response"
+                             formControlName="responseDto"
+                             required>
+                    </div>
+                  </div>-->
+                </div>
+              </tab>
+            </tabset>
+
+
+                  <!-- <form role="form"  [formGroup]="formQuestion"   (ngSubmit)='addQuestion(formQuestion)' novalidate >
+                     <h4 class="card-title text-muted">Ajouter une nouvell question</h4>
+                     <div class="row form-group">
+                       <label for="labelle" class="col-sm-3 col-form-label">labelle</label>
+                       <div class="col-sm-9">
+                         <input type="text"
+                                class="form-control"
+                                id="labelle"
+                                placeholder="labelle"
+                                formControlName="labelle">
+                       </div>
+
+
+                     </div>
+                     <br>
+                     <div class="row form-group">
+                       <label for="poids" class="col-sm-3 col-form-label">Poids</label>
+                       <div class="col-sm-9">
+                         <input type="text"
+                                class="form-control"
+                                id="poids"
+                                placeholder="Poids"
+                                formControlName="poids">
+                       </div>
+
+
+                     </div>
+                     <br>
+                     <div class="row form-group">
+                       <label for="reponseDto" class="col-sm-3 col-form-label">Reponse</label>
+                       <div class="col-sm-9">
+                         <input type="text"
+                                class="form-control"
+                                id="reponseDto"
+                                placeholder="Reponse"
+                                formControlName="reponseDto">
+                       </div>
+
+
+                     </div>-->
+
+
+
+            <div class="text-right">
+              <button type="button" class="btn btn-secondary" [routerLink]="['/admin/questions']"> Annuler</button>
+              <button class="btn btn-success" >Enregistrer</button>
+            </div>
+
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
